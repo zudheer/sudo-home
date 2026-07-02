@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoreKyn — a su-do product</title>
+  <meta name="description" content="CoreKyn is a workout logging and coaching app — training circles, progress tracking, and coach-student programs. Built end-to-end by su-do.">
+  <link rel="canonical" href="https://su-do.in/products/corekyn/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CoreKyn — a su-do product">
+  <meta property="og:description" content="Workout logging, coaching circles and progress tracking, built end-to-end by su-do.">
+  <meta property="og:url" content="https://su-do.in/products/corekyn/">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <style>:root { --accent: #3d7bff; --accent-soft: rgba(61,123,255,.14); --accent-2: #ff5d7a; --accent-2-soft: rgba(255,93,122,.12); }</style>
+</head>
+<body>
+
+  <nav class="nav is-scrolled">
+    <div class="container">
+      <a href="../../" class="brand"><span class="dot">$</span> su-do<small>.in</small></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../../#products" class="back-link">&larr; All products</a></li>
+        <li><a href="https://corekyn.su-do.in" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Visit live site</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <header class="detail-hero">
+    <div class="container">
+      <div class="detail-hero-grid">
+        <div class="icon-xl reveal in"><img src="../../assets/img/products/corekyn.png" alt="CoreKyn app icon"></div>
+        <div class="reveal in">
+          <span class="status-pill live">&#9679; live on Play Store</span>
+          <h1>CoreKyn</h1>
+          <p class="tagline">A workout logging and coaching app — training circles, progress tracking, and coach&ndash;student programs, backed by a FastAPI service handling auth, billing and social features.</p>
+          <div class="cta-row">
+            <a href="https://corekyn.su-do.in" target="_blank" rel="noopener" class="btn btn-primary">View more details &#8599;</a>
+            <a href="https://play.google.com/store/apps/details?id=com.sudo.corekyn" target="_blank" rel="noopener" class="btn btn-ghost">Get it on Google Play</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container detail-body">
+      <div class="detail-copy reveal in">
+        <h2>The idea</h2>
+        <p>
+          Most workout apps are either a bare set-and-rep logger or a bloated all-in-one platform.
+          CoreKyn sits in between: a training log you'll actually keep using, with just enough
+          social structure — training circles and coach&ndash;student programs — to keep you
+          accountable, without turning into a social network.
+        </p>
+
+        <h2>What we built</h2>
+        <div class="detail-feature-list">
+          <div class="item">
+            <span class="n">01</span>
+            <div><h4>Workout logging &amp; history</h4><p>Sets, reps, weight, and a full training history synced across devices.</p></div>
+          </div>
+          <div class="item">
+            <span class="n">02</span>
+            <div><h4>Exercise library</h4><p>A structured, Redis-cached exercise database to build routines from — fast even offline.</p></div>
+          </div>
+          <div class="item">
+            <span class="n">03</span>
+            <div><h4>Training circles &amp; coaching</h4><p>Connect with training partners, or get assigned to a coach who guides your program.</p></div>
+          </div>
+          <div class="item">
+            <span class="n">04</span>
+            <div><h4>Share via QR / link</h4><p>Send a workout or profile instantly — no account required for the recipient to view it.</p></div>
+          </div>
+          <div class="item">
+            <span class="n">05</span>
+            <div><h4>Subscriptions</h4><p>Free tier plus a Pro upgrade, billed through both Google Play Billing and Stripe, with server-side receipt verification.</p></div>
+          </div>
+          <div class="item">
+            <span class="n">06</span>
+            <div><h4>Security &amp; abuse prevention</h4><p>Phone-verified accounts, Play Integrity checks, and rate-limited auth endpoints behind an nginx layer.</p></div>
+          </div>
+        </div>
+
+        <h2>Under the hood</h2>
+        <p>
+          The backend is a FastAPI service (4 uvicorn workers) behind nginx, with PostgreSQL for
+          storage and Redis for caching and OTP handling. A separate cron container runs scheduled
+          jobs — subscription expiry, cleanup — daily via APScheduler. Auth uses Firebase phone
+          verification; payments run through Stripe and Google/Apple in-app purchase verification
+          in parallel, so the same subscription works regardless of which store a user paid through.
+        </p>
+      </div>
+
+      <aside class="detail-side reveal in">
+        <div class="side-card">
+          <h5>Project</h5>
+          <div class="row"><span>Role</span><span>Architecture, backend, mobile</span></div>
+          <div class="row"><span>Platform</span><span>Android</span></div>
+          <div class="row"><span>Status</span><span>Live on Google Play</span></div>
+          <div class="row"><span>Pricing</span><span>Free + Pro</span></div>
+        </div>
+        <div class="side-card">
+          <h5>Stack</h5>
+          <div class="tags">
+            <span>Flutter</span><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span>
+            <span>Celery</span><span>Firebase Auth</span><span>Stripe</span><span>Play Billing</span>
+          </div>
+        </div>
+        <div class="side-card">
+          <a href="https://corekyn.su-do.in" target="_blank" rel="noopener" class="btn btn-primary">View more details &#8599;</a>
+          <a href="https://play.google.com/store/apps/details?id=com.sudo.corekyn" target="_blank" rel="noopener" class="btn btn-ghost">Get it on Google Play</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 su-do. <a href="../../#products" style="color:var(--text-dim)">&larr; Back to all products</a></p>
+        <div class="footer-links">
+          <a href="https://corekyn.su-do.in" target="_blank" rel="noopener">corekyn.su-do.in</a>
+          <a href="https://su-do.in">su-do.in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

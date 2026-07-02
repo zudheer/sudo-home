@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PVault — a su-do product</title>
+  <meta name="description" content="PVault is a biometric-locked, locally encrypted diary and finance tracker, with an optional ad-free Pro tier and cloud backup. Built end-to-end by su-do.">
+  <link rel="canonical" href="https://su-do.in/products/pvault/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PVault — a su-do product">
+  <meta property="og:description" content="A private diary and finance tracker, built end-to-end by su-do.">
+  <meta property="og:url" content="https://su-do.in/products/pvault/">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <style>:root { --accent: #d9a441; --accent-soft: rgba(217,164,65,.14); --accent-2: #7c5cff; --accent-2-soft: rgba(124,92,255,.12); }</style>
+</head>
+<body>
+
+  <nav class="nav is-scrolled">
+    <div class="container">
+      <a href="../../" class="brand"><span class="dot">$</span> su-do<small>.in</small></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../../#products" class="back-link">&larr; All products</a></li>
+        <li><a href="https://pvault.su-do.in" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Visit live site</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <header class="detail-hero">
+    <div class="container">
+      <div class="detail-hero-grid">
+        <div class="icon-xl reveal in"><img src="../../assets/img/products/pvault.png" alt="PVault app icon"></div>
+        <div class="reveal in">
+          <span class="status-pill">&#9679; in development</span>
+          <h1>PVault</h1>
+          <p class="tagline">A private diary and finance tracker, encrypted on your device and locked behind your fingerprint or face — nothing leaves your phone unless you choose to back it up.</p>
+          <div class="cta-row">
+            <a href="https://pvault.su-do.in" target="_blank" rel="noopener" class="btn btn-primary">View more details &#8599;</a>
+            <a href="mailto:zudheerr@gmail.com?subject=Notify%20me%20about%20PVault" class="btn btn-ghost">Get notified at launch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container detail-body">
+      <div class="detail-copy reveal in">
+        <h2>The idea</h2>
+        <p>
+          Diary apps and finance trackers are usually two separate apps, and both usually ask you
+          to trust a server with fairly personal data. PVault keeps both in one private vault —
+          encrypted locally, unlocked with biometrics, with cloud backup as an explicit opt-in
+          rather than a default.
+        </p>
+
+        <h2>What we're building</h2>
+        <div class="detail-feature-list">
+          <div class="item">
+            <span class="n">01</span>
+            <div><h4>Diary &amp; notes</h4><p>Entries organized into sections, so journal, plans, and private notes each have their own space.</p></div>
+          </div>
+          <div class="item">
+            <span class="n">02</span>
+            <div><h4>Finance tracker</h4><p>Income and expenses logged alongside the diary — one private app for both.</p></div>
+          </div>
+          <div class="item">
+            <span class="n">03</span>
+            <div><h4>Biometric lock</h4><p>Fingerprint or face unlock via the device's own OS-level biometric APIs.</p></div>
+          </div>
+          <div class="item">
+            <span class="n">04</span>
+            <div><h4>Local encryption</h4><p>Entries encrypted at rest on-device — not just hidden behind a lock screen.</p></div>
+          </div>
+          <div class="item">
+            <span class="n">05</span>
+            <div><h4>Recycle bin</h4><p>Deleted entries can be recovered before they're gone for good.</p></div>
+          </div>
+          <div class="item">
+            <span class="n">06</span>
+            <div><h4>Free &amp; Pro tiers</h4><p>Free with ads, or PVault Pro for an ad-free experience plus optional Google Drive backup.</p></div>
+          </div>
+        </div>
+
+        <h2>Under the hood</h2>
+        <p>
+          PVault ships as two apps from one Flutter codebase — a free, ad-supported build and a
+          Pro build with no ads and cloud backup. Data lives in a local, encrypted SQLite database;
+          biometric unlock is handled entirely by the OS, so the app never touches raw fingerprint
+          or face data. When Pro's cloud backup is enabled, an encrypted copy is written to a
+          folder the app creates in the user's own Google Drive — never to a server we run.
+        </p>
+      </div>
+
+      <aside class="detail-side reveal in">
+        <div class="side-card">
+          <h5>Project</h5>
+          <div class="row"><span>Role</span><span>Architecture, mobile</span></div>
+          <div class="row"><span>Platform</span><span>Android, first</span></div>
+          <div class="row"><span>Status</span><span>In development</span></div>
+          <div class="row"><span>Pricing</span><span>Free + Pro</span></div>
+        </div>
+        <div class="side-card">
+          <h5>Stack</h5>
+          <div class="tags">
+            <span>Flutter</span><span>SQLite</span><span>AES encryption</span>
+            <span>Biometric auth</span><span>Google Drive API</span>
+          </div>
+        </div>
+        <div class="side-card">
+          <a href="https://pvault.su-do.in" target="_blank" rel="noopener" class="btn btn-primary">View more details &#8599;</a>
+          <a href="mailto:zudheerr@gmail.com?subject=Notify%20me%20about%20PVault" class="btn btn-ghost">Get notified at launch</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 su-do. <a href="../../#products" style="color:var(--text-dim)">&larr; Back to all products</a></p>
+        <div class="footer-links">
+          <a href="https://pvault.su-do.in" target="_blank" rel="noopener">pvault.su-do.in</a>
+          <a href="https://su-do.in">su-do.in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

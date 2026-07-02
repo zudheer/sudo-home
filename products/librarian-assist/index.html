@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Librarian Assist — a su-do product</title>
+  <meta name="description" content="Librarian Assist is a library management app for Kerala's libraries — books, members, lending, events, and finance. Built end-to-end by su-do.">
+  <link rel="canonical" href="https://su-do.in/products/librarian-assist/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Librarian Assist — a su-do product">
+  <meta property="og:description" content="Library management for Kerala's libraries, built end-to-end by su-do.">
+  <meta property="og:url" content="https://su-do.in/products/librarian-assist/">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <style>:root { --accent: #2b8fd6; --accent-soft: rgba(43,143,214,.14); --accent-2: #f0b03c; --accent-2-soft: rgba(240,176,60,.12); }</style>
+</head>
+<body>
+
+  <nav class="nav is-scrolled">
+    <div class="container">
+      <a href="../../" class="brand"><span class="dot">$</span> su-do<small>.in</small></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../../#products" class="back-link">&larr; All products</a></li>
+        <li><a href="https://librarian.su-do.in" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Visit live site</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <header class="detail-hero">
+    <div class="container">
+      <div class="detail-hero-grid">
+        <div class="icon-xl reveal in"><img src="../../assets/img/products/librarian-assist.png" alt="Librarian Assist app icon"></div>
+        <div class="reveal in">
+          <span class="status-pill live">&#9679; live on Play Store</span>
+          <h1>Librarian Assist</h1>
+          <p class="tagline">Everything a small library needs to run — books, members, lending, events, and finances — built for Kerala's libraries, offline-first, with optional Google Drive backup.</p>
+          <div class="cta-row">
+            <a href="https://librarian.su-do.in" target="_blank" rel="noopener" class="btn btn-primary">View more details &#8599;</a>
+            <a href="https://play.google.com/store/apps/details?id=com.sudo.librarian_assist" target="_blank" rel="noopener" class="btn btn-ghost">Get it on Google Play</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container detail-body">
+      <div class="detail-copy reveal in">
+        <h2>The idea</h2>
+        <p>
+          Kerala's small libraries already run on paper registers — an in-out ledger, a members
+          book, an event diary. Librarian Assist doesn't try to replace that workflow with
+          something unfamiliar; it digitizes the exact registers librarians already keep, so the
+          app feels obvious on day one instead of requiring retraining.
+        </p>
+
+        <h2>What we built</h2>
+        <div class="detail-feature-list">
+          <div class="item">
+            <span class="n">01</span>
+            <div><h4>Books &amp; members</h4><p>Full catalogue and member directory, with bulk Excel import in the standard KSLC data-entry format — including automatic column matching if headers don't line up exactly.</p></div>
+          </div>
+          <div class="item">
+            <span class="n">02</span>
+            <div><h4>In-out register</h4><p>Lending and returns tracked with serial numbers, call numbers, and member details — month-by-month browsing and Excel export.</p></div>
+          </div>
+          <div class="item">
+            <span class="n">03</span>
+            <div><h4>Calendar &amp; holidays</h4><p>Weekly and one-off holidays; lending automatically pauses on closed days.</p></div>
+          </div>
+          <div class="item">
+            <span class="n">04</span>
+            <div><h4>Events</h4><p>Library events with photos, contests, sub-events, and participant lists — exported to Word with the library's letterhead.</p></div>
+          </div>
+          <div class="item">
+            <span class="n">05</span>
+            <div><h4>Finance &amp; fees</h4><p>Income, expenses, and membership fee collections, tied back into the library's books.</p></div>
+          </div>
+          <div class="item">
+            <span class="n">06</span>
+            <div><h4>Backup &amp; restore</h4><p>Fully offline by default; optional Google sign-in backs up and restores data via the librarian's own Drive.</p></div>
+          </div>
+        </div>
+
+        <h2>Under the hood</h2>
+        <p>
+          The app is offline-first by design — a local SQLite database is the source of truth, so
+          a library with unreliable internet loses nothing. Excel import/export uses the exact
+          column layout Kerala State Library Council already expects, with fuzzy header matching
+          for sheets that don't match exactly. Backup is opt-in: when enabled, the app writes
+          directly to a folder it creates in the librarian's own Google Drive, scoped to files it
+          created — we never see the data ourselves.
+        </p>
+      </div>
+
+      <aside class="detail-side reveal in">
+        <div class="side-card">
+          <h5>Project</h5>
+          <div class="row"><span>Role</span><span>Architecture, backend, mobile</span></div>
+          <div class="row"><span>Platform</span><span>Android</span></div>
+          <div class="row"><span>Status</span><span>Live on Google Play</span></div>
+          <div class="row"><span>Pricing</span><span>Free</span></div>
+        </div>
+        <div class="side-card">
+          <h5>Stack</h5>
+          <div class="tags">
+            <span>Flutter</span><span>SQLite</span><span>Google Drive API</span>
+            <span>Excel import/export</span><span>Word export</span>
+          </div>
+        </div>
+        <div class="side-card">
+          <a href="https://librarian.su-do.in" target="_blank" rel="noopener" class="btn btn-primary">View more details &#8599;</a>
+          <a href="https://play.google.com/store/apps/details?id=com.sudo.librarian_assist" target="_blank" rel="noopener" class="btn btn-ghost">Get it on Google Play</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 su-do. <a href="../../#products" style="color:var(--text-dim)">&larr; Back to all products</a></p>
+        <div class="footer-links">
+          <a href="https://librarian.su-do.in" target="_blank" rel="noopener">librarian.su-do.in</a>
+          <a href="https://su-do.in">su-do.in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>
